@@ -13,8 +13,10 @@ public class removeElement {
     public int removeElement(int[] nums, int val) {
         int count = 0;
         for( int i = 0; i < nums.length; i++){
+            //if the current number is not the value want to remove
             if (nums[i] != val){
-                nums[count++] = nums[i];
+                nums[count] = nums[i];
+                count++;
             }
         }
         return count;
